@@ -1,0 +1,14 @@
+import * as Ac from '#src/actor.js';
+import * as At from '#src/attributes.js';
+declare const shoot: (a: Ac.Actor, bullet: Ac.Actor) => Ac.Actor;
+declare const heal: (a: Ac.Actor, heals?: number) => Ac.Actor;
+declare const hit: (a: Ac.Actor, damage?: number) => Ac.Actor;
+declare const freeze: (a: Ac.Actor, b: boolean) => Ac.Actor;
+declare const setShield: (a: Ac.Actor, b: boolean) => Ac.Actor;
+declare const move: (a: Ac.Actor, x: number, y: number) => Ac.Actor;
+declare const playerCollide: (a: Ac.Actor, t: At.actorType, currentActors: Ac.Actor[]) => Ac.Actor;
+declare const stoneCollide: (a: Ac.Actor, t: At.actorType) => Ac.Actor;
+declare const foeCollide: (a: Ac.Actor, ty: At.actorType) => Ac.Actor;
+declare const bulletCollide: (a: Ac.Actor, ty: At.actorType) => Ac.Actor;
+declare const potionCollide: (a: Ac.Actor, ty: At.actorType) => Ac.Actor;
+export { move, shoot, heal, freeze, setShield, hit, potionCollide, bulletCollide, foeCollide, stoneCollide, playerCollide };
